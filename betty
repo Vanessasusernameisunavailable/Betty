@@ -1,0 +1,13 @@
+#!/bin/sh
+ 
+#This script runs the Betty linter on the specified filename
+ 
+if [ "$#" -ne 1 ]; then
+  echo "Usage: betty <filename>" 
+  exit 1
+fi
+ 
+filename="$1"
+ 
+betty-style "$filename"
+betty-doc "$filename"
